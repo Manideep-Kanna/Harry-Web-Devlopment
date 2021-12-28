@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+    <style>
+        button{
+            padding: 4px;
+            border-radius: 5px;
+            width: 53px;
+            background-color: red;
+            border: black;
+            margin: 0px 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quod saepe voluptates, nesciunt minima illo eaque, quam, et sequi nobis quibusdam voluptatem ut soluta. Officia sapiente labore autem illo! Commodi id quis dolore! Dicta debitis ratione atque nisi est quo alias deserunt optio inventore natus id, minus, consequatur fuga aperiam officia iste consectetur, tenetur quibusdam incidunt dolorem soluta quidem tempora! Rerum quas aspernatur libero, autem ducimus modi!</p>
+        <button id="btn" onclick="hide()">Hide</button>
+    </div>
+    <script>
+        let para=document.getElementById("para")
+        para.addEventListener('mouseover',function run(){
+            alert("Mouse is on the para");
+        })
+        para.addEventListener('mouseout',function run(){
+            alert("Mouse is outside the para");
+        })
+        function hide(){
+            let btn=document.getElementById("btn")
+            if(para.style.display !='none')para.style.display='none';
+            else para.style.display='block';
+        }
+    </script>
+</body>
+</html>
